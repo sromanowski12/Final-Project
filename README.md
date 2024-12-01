@@ -1,53 +1,95 @@
 # College Cashflow
 
+<!--TOC-->
+  - [Game Player(s)](#game-players)
+  - [Game Rules](#game-rules)
+  - [Game Scenes](#game-scenes)
+  - [Finite State Machine (FSM)](#finite-state-machine-fsm)
+    - [Machine States](#machine-states)
+  - [Course / Tile Overview](#course-tile-overview)
+    - [**Course Tiles**:](#course-tiles)
+    - [**"Special" Tiles**:](#special-tiles)
+  - [Image Credit](#image-credit)
+<!--/TOC-->
+
+---
+
 **Objective** - graduate college without going broke
 
-- when a player acquires 60 credits or more, and has $0 or more tuition, then the game is over 
+- when a player acquires 60 credits or more, and has $0 or more for tuition, then the game is over 
     - if a player spends all of their tuition, without completing 60 credit hours, then the other player wins
+
+---
+
+## Game Player(s)
+- Player 1 - Knight = User
+- Player 2 - Hat = User
 
 ## Game Rules
 - player(s) advance by rolling the die, and moving the result number of tiles
 - when player(s) land on a tile that's a course they may either ignore it or purchase it
-    - must be for sale, and not previously purchased by a player
-- when player(s) land on a tiles that's a professor, they may either ignore it or pull a card
-    - if a card is pulled, the player must perform the action associated to the card
+    - must be for sale aka not previously purchased by a player
+    - must be purchased for the price provided
+    - if purchased, the player receives the number of credits associated to the course
+    - once a course is purchased, it is unavailable to the other player
+- when player(s) land on a tile that's a professor, they may either ignore it or pull a card
+    - if a card is pulled, the player **must** perform the action associated to the card
 - when player(s) pass the starting tile (Tile 0), a new semester begins, and they receive $200 added to their tuition
 
-## Tile Overview
+## Game Scenes
+
+## Finite State Machine (FSM)
+### Machine States
+    -
+    -
+    -
+
+
+## Course / Tile Overview
+### **Course Tiles**:
+
+### **"Special" Tiles**:
+    - START
+    - PROFESSOR 1/2/3/4
+    - LIBRARY 1/2
+    - REPORT CARD
+
+**Table of Each Course / Tile**
+
 | Tile # | Course / Tile | Price | Credits |
 | ------ | ------------- | ----- | ------- |
 | 0      | START         | $0    | 0       |
-| 1      | ENG-W101      | $60   | 1       |
-| 2      | ENG-W201      | $60   | 2       |
+| 1      | ENG-W101      | $60   | 3       |
+| 2      | ENG-W201      | $60   | 3       |
 | 3      | ENG-W202      | $60   | 3       |
 | 4      | PROFESSOR 1   | $0    | 0       |
-| 5      | INFO-I101     | $100  | 1       |
-| 6      | INFO-I201     | $100  | 2       |
+| 5      | INFO-I101     | $100  | 3       |
+| 6      | INFO-I201     | $100  | 3       |
 | 7      | INFO-I202     | $120  | 3       |
 | 8      | LIBRARY       | $0    | 0       |
-| 9      | SPAN-S101     | $140  | 1       |
-| 10     | SPAN-S102     | $140  | 2       |
+| 9      | SPAN-S101     | $140  | 3       |
+| 10     | SPAN-S102     | $140  | 3       |
 | 11     | SPAN-S202     | $160  | 3       |
 | 12     | PROFESSOR 2   | $0    | 0       |
-| 13     | CSCI-C151     | $180  | 1       |
-| 14     | CSCI-C243     | $180  | 2       |
+| 13     | CSCI-C151     | $180  | 3       |
+| 14     | CSCI-C243     | $180  | 3       |
 | 15     | CSCI-C311     | $200  | 3       |
 | 16     | REPORT CARD   | $0    | 0       |
-| 17     | BIOL-L101     | $220  | 1       |
-| 18     | BIOL-L211     | $220  | 2       |
-| 19     | BIOL-L311     | $240  | 3       |
+| 17     | BIOL-L101     | $220  | 5       |
+| 18     | BIOL-L211     | $220  | 5       |
+| 19     | BIOL-L311     | $240  | 5       |
 | 20     | PROFESSOR 3   | $0    | 0       |
-| 21     | MATH-M118     | $260  | 1       |
-| 22     | MATH-M125     | $260  | 2       |
-| 23     | MATH-M208     | $280  | 3       |
+| 21     | MATH-M118     | $260  | 5       |
+| 22     | MATH-M125     | $260  | 5       |
+| 23     | MATH-M208     | $280  | 5       |
 | 24     | LIBRARY       | $0    | 0       |
-| 25     | CHEM-C105     | $300  | 1       |
-| 26     | CHEM-C106     | $300  | 2       |
-| 27     | CHEM-C125     | $320  | 3       |
+| 25     | CHEM-C105     | $300  | 5       |
+| 26     | CHEM-C106     | $300  | 5       |
+| 27     | CHEM-C125     | $320  | 5       |
 | 28     | PROFESSOR 4   | $0    | 0       |
-| 29     | BUS-K201      | $350  | 1       |
-| 30     | BUS-K301      | $350  | 2       |
-| 31     | BUS-K302      | $400  | 3       |
+| 29     | BUS-K201      | $350  | 5       |
+| 30     | BUS-K301      | $350  | 5       |
+| 31     | BUS-K302      | $400  | 5       |
 
 ## Image Credit
 
