@@ -4,6 +4,9 @@
   - [Game Player(s)](#game-players)
   - [Game Rules](#game-rules)
   - [Game Scenes](#game-scenes)
+    - [Start Scene -](#start-scene-)
+    - [Board Game Scene -](#board-game-scene-)
+    - [End Scene -](#end-scene-)
   - [Finite State Machine (FSM)](#finite-state-machine-fsm)
     - [Machine States](#machine-states)
   - [Course / Tile Overview](#course-tile-overview)
@@ -16,7 +19,8 @@
 
 **Objective** - graduate college without going broke
 
-- when a player acquires 60 credits or more, and has $0 or more for tuition, then the game is over 
+- player(s) begin college with $3,500 for tuition
+- when a player acquires 50 credits or more, and has $0 or more for tuition, then the game is over 
     - if a player spends all of their tuition, without completing 60 credit hours, then the other player wins
 
 ---
@@ -37,6 +41,16 @@
 - when player(s) pass the starting tile (Tile 0), a new semester begins, and they receive $200 added to their tuition
 
 ## Game Scenes
+### Start Scene -
+The start scene is the first scene displayed and it includes a button to start a new game.
+- *Represents the beginning of college*
+### Board Game Scene -
+
+### End Scene -
+The end scene is the last scene displayed and it includes a button to start a new game.
+- *Represents graduating college*
+
+---
 
 ## Finite State Machine (FSM)
 ### Machine States
@@ -95,7 +109,7 @@
 
 | Images |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Brunette Teacher stock illustration](https://www.istockphoto.com/vector/brunette-teacher-gm165906501-20385433)                                                                                                                                                                                                                                                            |
+| [Brunette Teacher stock illustration](https://www.istockphoto.com/vector/brunette-teacher-gm165906501-20385433)       |
 | [Blue ceramic tile mosaic in swimming pool Vector illustration Eps 10](https://img.freepik.com/premium-vector/blue-ceramic-tile-mosaic-swimming-pool-vector-illustration-eps-10_230920-1005.jpg?w=826)                                                                                                                                                                      |
 | [Grid paper Stock Vector Images](https://st.depositphotos.com/1427101/4343/v/450/depositphotos_43433909-stock-illustration-blue-grid-paper.jpg)                                                                                                                                                                                                                             |
 | [Male Teacher Stock](https://thumbs.dreamstime.com/b/cartoon-male-teacher-illustration-51245540.jpg?w=360)                                                                                                                                                                                                                                                                  |
@@ -112,3 +126,5 @@
 | [Good Grades Clipart - Full Size Clipart (#5336336) - PinClipart](https://www.pinclipart.com/picdir/big/533-5336336_good-grades-clipart.png)                                                                                                                                                                                                                                |
 | [Red plastic siding wall stock photo. Image of building - 11409442](https://thumbs.dreamstime.com/b/red-plastic-siding-wall-11409442.jpg)                                                                                                                                                                                                                                   |
 | [Premium Vector \| Happy cute kid boy study hard think](https://i.pinimg.com/736x/24/ad/d0/24add0add9542dbc1d28dd4aa26d10fc.jpg)                                                                                                                                                                                                                                            |
+| [What Is A Good Graduation Rate For A College?](https://tagvault.org/blog/what-is-a-good-graduation-rate-for-a-college/)                                                                                                                                                                                                                                                    |
+| [University or College Students in Campus Scene.](https://thumbs.dreamstime.com/b/university-college-students-campus-scene-people-cartoon-characters-studying-relaxing-playing-sports-park-academic-165167035.jpg)                                                                                                                                                          |
