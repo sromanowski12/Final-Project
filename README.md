@@ -19,8 +19,8 @@
 
 **Objective** - graduate college without going broke
 
-- player(s) begin college with $3,500 for tuition
-- when a player acquires 50 credits or more, and has $0 or more for tuition, then the game is over 
+- player(s) begin college with $2,500 for tuition
+- when a player acquires 45 credits or more, and has $0 or more for tuition, then the game is over 
     - if a player spends all of their tuition, without completing 60 credit hours, then the other player wins
 
 ---
@@ -46,6 +46,9 @@ The start scene is the first scene displayed and it includes a button to start a
 - *Represents the beginning of college*
 ### Board Game Scene -
 
+*Mock-up diagram*
+![Board Game Scene](BoardGame.png)
+
 ### End Scene -
 The end scene is the last scene displayed and it includes a button to start a new game.
 - *Represents graduating college*
@@ -54,13 +57,20 @@ The end scene is the last scene displayed and it includes a button to start a ne
 
 ## Finite State Machine (FSM)
 ### Machine States
-    -
-    -
-    -
+    - moveRoll
+    - idle
+    - library
+    - professor
+    - purchase
+    - gameWon
+
 
 
 ## Course / Tile Overview
 ### **Course Tiles**:
+    - Course Name
+    - Course Price
+    - Course Credits
 
 ### **"Special" Tiles**:
     - START
@@ -80,7 +90,7 @@ The end scene is the last scene displayed and it includes a button to start a ne
 | 5      | INFO-I101     | $100  | 3       |
 | 6      | INFO-I201     | $100  | 3       |
 | 7      | INFO-I202     | $120  | 3       |
-| 8      | LIBRARY       | $0    | 0       |
+| 8      | LIBRARY 1     | $0    | 0       |
 | 9      | SPAN-S101     | $140  | 3       |
 | 10     | SPAN-S102     | $140  | 3       |
 | 11     | SPAN-S202     | $160  | 3       |
@@ -96,7 +106,7 @@ The end scene is the last scene displayed and it includes a button to start a ne
 | 21     | MATH-M118     | $260  | 5       |
 | 22     | MATH-M125     | $260  | 5       |
 | 23     | MATH-M208     | $280  | 5       |
-| 24     | LIBRARY       | $0    | 0       |
+| 24     | LIBRARY 2     | $0    | 0       |
 | 25     | CHEM-C105     | $300  | 5       |
 | 26     | CHEM-C106     | $300  | 5       |
 | 27     | CHEM-C125     | $320  | 5       |
