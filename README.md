@@ -46,7 +46,8 @@ The start scene is the first scene displayed and it includes a button to start a
 - *Represents the beginning of college*
 ### Board Game Scene -
 
-*Mock-up diagram*
+- *Mock-up diagram*
+
 ![Board Game Scene](BoardGame.png)
 
 ### End Scene -
