@@ -13,6 +13,7 @@
     - [**Course Tiles**:](#course-tiles)
     - [**"Special" Tiles**:](#special-tiles)
   - [Image Credit](#image-credit)
+  - [Models Credit](#models-credit)
 <!--/TOC-->
 
 ---
@@ -139,3 +140,13 @@ The end scene is the last scene displayed and it includes a button to start a ne
 | [Premium Vector \| Happy cute kid boy study hard think](https://i.pinimg.com/736x/24/ad/d0/24add0add9542dbc1d28dd4aa26d10fc.jpg)                                                                                                                                                                                                                                            |
 | [What Is A Good Graduation Rate For A College?](https://tagvault.org/blog/what-is-a-good-graduation-rate-for-a-college/)                                                                                                                                                                                                                                                    |
 | [University or College Students in Campus Scene.](https://thumbs.dreamstime.com/b/university-college-students-campus-scene-people-cartoon-characters-studying-relaxing-playing-sports-park-academic-165167035.jpg)                                                                                                                                                          |
+
+## Models Credit
+| Models |
+| ----------------------------------------------------------------------------------- |
+| [Knight](https://www.cs.iusb.edu/~dvrajito/teach/i355/lab10/lab10.zip)              |
+| [Top Hat](https://sketchfab.com/3d-models/top-hat-7ff84e7e989141a6869c7afc12a5e398) |
+| [Baloon](https://www.cs.iusb.edu/~dvrajito/teach/i355/lab9/lab9.zip)                |
+| [Sports Stadium](https://free3d.com/3d-model/sports-stadium-59498.html)             |
+| [House Complex](https://free3d.com/3d-model/house-complex-45918.html)               |
+| [Die](https://www.cs.iusb.edu/~dvrajito/teach/i355/lab10/lab10.zip)                 |
