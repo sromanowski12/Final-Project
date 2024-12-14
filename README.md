@@ -1,5 +1,9 @@
 # College Cashflow
 
+created by: Seth Romanowski
+
+created with: Unity Game Engine
+
 <!--TOC-->
   - [Game Player(s)](#game-players)
   - [Game Rules](#game-rules)
@@ -8,38 +12,48 @@
     - [Board Game Scene -](#board-game-scene-)
     - [End Scene -](#end-scene-)
   - [Finite State Machine (FSM)](#finite-state-machine-fsm)
+    - [Diagram](#diagram)
     - [Machine States](#machine-states)
   - [Course / Tile Overview](#course-tile-overview)
     - [**Course Tiles**:](#course-tiles)
     - [**"Special" Tiles**:](#special-tiles)
   - [Image Credit](#image-credit)
   - [Models Credit](#models-credit)
+  - [Sound Credit](#sound-credit)
 <!--/TOC-->
 
 ---
 
 **Objective** - graduate college without going broke
 
-- player(s) begin college with $2,500 for tuition
+- player(s) begin college with $1,750 for tuition
 - when a player acquires 45 credits or more, and has $0 or more for tuition, then the game is over 
-    - if a player spends all of their tuition, without completing 60 credit hours, then the other player wins
+    - player(s) may have < $0 for tuition but may not finish the game until their balance is $0 or more.
+    
 
 ---
 
 ## Game Player(s)
-- Player 1 - Knight = User
-- Player 2 - Hat = User
+- Player 1 - Macbook Laptop = User
+- Player 2 - Graduation Hat = CPU or User
 
 ## Game Rules
-- player(s) advance by rolling the die, and moving the result number of tiles
-- when player(s) land on a tile that's a course they may either ignore it or purchase it
-    - must be for sale aka not previously purchased by a player
-    - must be purchased for the price provided
+- Player(s) advance by rolling the die, and moving the resulting number of tiles
+    - If playing against the CPU, the die is rolled and the player moves automatically
+- Each player may select a major after their initial roll
+    - i.e. Player 1: roll die, select major, perform action (repeat for Player 2)
+- If player(s) land on a tile that's a course they may either purchase it or ignore it
+    - **must** be for sale aka not previously purchased by a player
+    - **must** be purchased for the price provided, unless it's a major course then it is 1/2 price. (*See table below for major courses*)
     - if purchased, the player receives the number of credits associated to the course
     - once a course is purchased, it is unavailable to the other player
-- when player(s) land on a tile that's a professor, they may either ignore it or pull a card
+    - if playing against the CPU, the course is purchased automatically (provided player's tuition is greater than or equal to the course price)
+- If player(s) land on a tile that's a professor, they may either pull a card or ignore it
     - if a card is pulled, the player **must** perform the action associated to the card
-- when player(s) pass the starting tile (Tile 0), a new semester begins, and they receive $200 added to their tuition
+- When player(s) pass the starting tile (Tile 0), a new semester begins, and they receive $50 added to their tuition
+- If player(s) land on the library (1) tile (Tile 8), they must proceed to the next player's turn
+- If player(s) land on the library (2) tile (Tile 24), they must return to the library (1) tile (Tile 8)
+- If player(s) land on the report card tile (Tile 16), the player's GPA is compared & the player with the highest GPA gets $300 add to their tuition
 
 ## Game Scenes
 ### Start Scene -
@@ -58,6 +72,9 @@ The end scene is the last scene displayed and it includes a button to start a ne
 ---
 
 ## Finite State Machine (FSM)
+### Diagram
+![FSM](FSM.png)
+
 ### Machine States
     - moveRoll
     - idle
@@ -76,9 +93,43 @@ The end scene is the last scene displayed and it includes a button to start a ne
 
 ### **"Special" Tiles**:
     - START
+        when player(s) pass this tile they get $50 added to their tuition
     - PROFESSOR 1/2/3/4
+        provide player(s) the opportunity to pull a card, then must perform 1 of 10 actions
     - LIBRARY 1/2
+        library (1), proceed to next player
+        library (2), return to library (1) tile
     - REPORT CARD
+        performs a comparison of the player's GPA & player with highest GPA gets $300 added to their tuition
+
+**Courses by Major**
+
+| Major | Course | 
+| ---------------- | --------- |
+| General Studies  | ENG-W101  |
+|                  | ENG-W201  |
+|                  | ENG-W202  |
+|                  | SPAN-S101 |
+|                  | SPAN-S102 |
+|                  | SPAN-S202 |
+| Business         | MATH-M118 |
+|                  | MATH-M125 |
+|                  | MATH-M208 |
+|                  | BUS-K201  |
+|                  | BUS-K301  |
+|                  | BUS-K302  |
+| Computer Science | CSCI-C151 |
+|                  | CSCI-C243 |
+|                  | CSCI-C311 |
+|                  | INFO-I101 |
+|                  | INFO-I201 |
+|                  | INFO-I202 |
+| Science          | BIOL-L101 |
+|                  | BIOL-L211 |
+|                  | BIOL-L311 |
+|                  | CHEM-C105 |
+|                  | CHEM-C106 |
+|                  | CHEM-C125 |
 
 **Table of Each Course / Tile**
 
@@ -144,9 +195,18 @@ The end scene is the last scene displayed and it includes a button to start a ne
 ## Models Credit
 | Models |
 | ----------------------------------------------------------------------------------- |
-| [Knight](https://www.cs.iusb.edu/~dvrajito/teach/i355/lab10/lab10.zip)              |
-| [Top Hat](https://sketchfab.com/3d-models/top-hat-7ff84e7e989141a6869c7afc12a5e398) |
-| [Baloon](https://www.cs.iusb.edu/~dvrajito/teach/i355/lab9/lab9.zip)                |
+| [Graduation Hat](https://free3d.com/3d-model/graduation-hat-104829.html)            |
+| [Building](https://free3d.com/3d-model/building-80759.html)                         |
+| [Mac Laptop](https://free3d.com/3d-model/mac-laptop-211499.html)                    |
+| [Knight](https://www.cs.iusb.edu/~dvrajito/teach/i355/lab10/lab10.zip)              | Lab 10 |
+| [Baloon](https://www.cs.iusb.edu/~dvrajito/teach/i355/lab9/lab9.zip)                | Lab 9 |
 | [Sports Stadium](https://free3d.com/3d-model/sports-stadium-59498.html)             |
 | [House Complex](https://free3d.com/3d-model/house-complex-45918.html)               |
-| [Die](https://www.cs.iusb.edu/~dvrajito/teach/i355/lab10/lab10.zip)                 |
+| [Die](https://www.cs.iusb.edu/~dvrajito/teach/i355/lab10/lab10.zip)                 | Lab 10 |
+| [Road](https://free3d.com/3d-model/street-estrada-971348.html)                      |  |
+| [Small Pine Tree](https://www.cs.iusb.edu/~dvrajito/teach/i355/lab6/lab6.zip)       | Lab 6 |
+
+## Sound Credit
+| Sounds |
+| ---------------------------------------------------------------------------------- |
+| [Cartoon success fanfare](https://www.zapsplat.com/music/cartoon-success-fanfare/) |
